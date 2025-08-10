@@ -13,6 +13,8 @@ A full end-to-end data engineering workflow implemented on Azure, showcasing:
 - **Python(PySpark)**
 
 ## Pipeline Workflow
-1. **Ingested** raw data from source to **ADLS Gen2** using **ADF**.
-2. **Transformed** data in **Azure Databricks** using **PySpark**.
-3. **Stored** processed data back in **ADLS Gen2**.
+1. **Ingest** raw data from source to **Bronze Layer** in **ADLS Gen2** using **ADF**.
+2. **Transform & clean** data in **Azure Databricks** (PySpark) into **Silver Layer**.
+3. **Aggregate & optimize** data into **Gold Layer** for analytics and reporting.
+4. Use **Delta Lake** for versioning, schema enforcement, and time travel.
+5. Manage and secure datasets with **Unity Catalog** for governance.
